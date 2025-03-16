@@ -1,23 +1,17 @@
-
-const puppeteer = require('puppeteer-extra');
-const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+const puppeteer = require('puppeteer');
 const { getChromePath, userAgent } = require('./config');
 const parseVintedPage = require('./parser');
-
-puppeteer.use(StealthPlugin());
 
 async function search(url) {
     console.log(`🚀 Lancement de Puppeteer pour : ${url}`);
     const chromePath = getChromePath();
-    if (!chromePath) return [];
 
     const browser = await puppeteer.launch({
         headless: true,
-        executablePath: chromePath,
+        executablePath: chromePath || undefined, // fallback automatique si getChromePath ne renvoie rien
         args: [
             '--no-sandbox',
             '--disable-setuid-sandbox',
-            '--disable-blink-features=AutomationControlled',
             '--disable-infobars',
             '--disable-gpu'
         ]

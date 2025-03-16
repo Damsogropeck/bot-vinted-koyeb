@@ -1,5 +1,5 @@
 {
-  "name": "bot-vinted-koyeb",
+  "name": "bot-vinted",
   "version": "1.0.0",
   "main": "src/bot.js",
   "scripts": {
@@ -10,6 +10,6 @@
     "dotenv": "^16.3.1",
     "easy-json-database": "^1.5.0",
     "express": "^4.18.2",
-    "puppeteer": "^22.8.2"
+    "puppeteer": "^22.15.0"
   }
 }
