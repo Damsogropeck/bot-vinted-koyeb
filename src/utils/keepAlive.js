@@ -1,15 +1,10 @@
-
 const express = require('express');
-const server = express();
+const app = express();
 
-server.all('/', (req, res) => {
-    res.send('Le bot fonctionne !');
-});
+app.get('/', (req, res) => res.send('✅ Bot Vinted is alive'));
 
 function keepAlive() {
-    server.listen(4000, () => {
-        console.log('✅ Serveur Express actif sur le port 4000 !');
-    });
+  app.listen(4000, () => console.log('✅ Serveur Express actif sur le port 4000 !'));
 }
 
 module.exports = keepAlive;

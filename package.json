@@ -2,14 +2,13 @@
   "name": "bot-vinted-koyeb",
   "version": "1.0.0",
   "main": "src/bot.js",
-  "type": "commonjs",
   "scripts": {
     "start": "node src/bot.js"
   },
   "dependencies": {
     "discord.js": "^14.13.0",
     "dotenv": "^16.3.1",
-    "easy-json-database": "^1.0.0",
+    "easy-json-database": "^1.5.0",
     "express": "^4.18.2",
     "puppeteer": "^22.8.2"
   }
