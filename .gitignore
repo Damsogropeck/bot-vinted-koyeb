@@ -1,0 +1,21 @@
+# 🔐 Ne jamais versionner les fichiers sensibles
+.env
+config/.env
+
+# 📦 Dossiers de dépendances
+node_modules/
+
+# ⚙ Fichiers temporaires ou de build
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.pid
+
+# 💾 Systèmes d'exploitation
+.DS_Store
+Thumbs.db
+
+# 🚫 Éditeurs
+.vscode/
+.idea/
