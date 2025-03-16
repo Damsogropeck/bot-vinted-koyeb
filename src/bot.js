@@ -1,14 +1,14 @@
 // === src/bot.js ===
 require("dotenv").config();
 require("./utils/proxy");
-const fs = require("fs");
-let config = require("../config/config.json");
 
-// Remplace les variables sensibles par celles de l'environnement
-config.token = process.env.DISCORD_TOKEN;
-config.clientId = process.env.DISCORD_CLIENT_ID;
-config.adminIDs = [process.env.DISCORD_ADMIN_ID];
-config.guildID = process.env.DISCORD_GUILD_ID;
+// Utilisation directe des variables d'environnement sans passer par config.json
+const config = {
+  token: process.env.DISCORD_TOKEN,
+  clientId: process.env.DISCORD_CLIENT_ID,
+  adminIDs: [process.env.DISCORD_ADMIN_ID],
+  guildID: process.env.DISCORD_GUILD_ID
+};
 
 const db = require("./db");
 const client = require("./discord/client");
