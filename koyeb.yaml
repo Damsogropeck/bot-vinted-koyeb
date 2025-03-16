@@ -1,0 +1,10 @@
+name: bot-vinted
+services:
+  - name: vinted-worker
+    git:
+      repo: https://github.com/TON_UTILISATEUR/TON_REPO
+      branch: main
+    dockerfile: Dockerfile
+    instance_type: nano
+    routes:
+      - path: /
