@@ -1,7 +1,5 @@
 // src/API/index.js
-const puppeteer = require('puppeteer-extra');
-const StealthPlugin = require('puppeteer-extra-plugin-stealth');
-puppeteer.use(StealthPlugin());
+const puppeteer = require('puppeteer'); // pas puppeteer-core
 
 async function search(url) {
     const browser = await puppeteer.launch({
